@@ -1,4 +1,4 @@
-package mo.ed.bankmisr.features.fromto.screens
+package mo.ed.bankmisr.features.fromtofeature.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -16,7 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import mo.ed.bankmisr.ui.basecomposeui.CurrencyConverterLayout
 import mo.ed.bankmisr.ui.basecomposeui.DropDownMenuLayout
-import mo.ed.bankmisr.features.fromto.fragment.FromToFragment
+import mo.ed.bankmisr.features.fromtofeature.fragment.FromToFragment
 
 @Composable
 fun fromToScreen(

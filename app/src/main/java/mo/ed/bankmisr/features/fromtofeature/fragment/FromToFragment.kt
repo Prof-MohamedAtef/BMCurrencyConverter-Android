@@ -1,4 +1,4 @@
-package mo.ed.bankmisr.features.fromto.fragment
+package mo.ed.bankmisr.features.fromtofeature.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +9,8 @@ import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import mo.ed.bankmisr.ui.views.fragments.BaseFragment
-import mo.ed.bankmisr.features.fromto.screens.fromToScreen
-import mo.ed.bankmisr.features.fromto.viewmodels.FromToViewModel
+import mo.ed.bankmisr.features.fromtofeature.screens.fromToScreen
+import mo.ed.bankmisr.features.fromtofeature.viewmodels.FromToViewModel
 
 @AndroidEntryPoint
 class FromToFragment : BaseFragment() {

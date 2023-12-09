@@ -5,7 +5,7 @@
     app:startDestination="@id/FromToFragment">
     <fragment
         android:id="@+id/FromToFragment"
-        android:name="mo.ed.bankmisr.features.fromto.fragment.FromToFragment"
+        android:name="mo.ed.bankmisr.features.fromtofeature.fragment.FromToFragment"
         android:label="fragment_walkthrough">
 
     </fragment>
