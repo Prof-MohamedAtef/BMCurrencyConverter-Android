@@ -1,6 +1,7 @@
 package mo.ed.bankmisr.interactor
 
 import mo.ed.bankmisr.repositories.FromToRepository
+import mo.ed.bankmisr.utils.Result
 import javax.inject.Inject
 
 class FromToInteractor @Inject constructor(
@@ -8,7 +9,7 @@ class FromToInteractor @Inject constructor(
 ) {
 
     suspend fun getCurrencies(): Result<*> {
-        return fromToRepository.getUserData()
+        return fromToRepository.getCurrencies()
     }
 
 }

@@ -12,7 +12,7 @@ import javax.inject.Inject
 class FromToRepository @Inject constructor(
     internal val apiService: ApiService,
 ) {
-    suspend fun getUsers(): Result<Any> {
+    suspend fun getCurrencies(): Result<Any> {
         kotlin.runCatching {
             apiService.getCurrencies().also {
                 when (it) {
