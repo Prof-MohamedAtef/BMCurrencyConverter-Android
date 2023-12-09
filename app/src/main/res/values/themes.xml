@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.BankMisr" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="GenericProgressBackground" parent="android:Theme">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">#00FFFFFF</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>
