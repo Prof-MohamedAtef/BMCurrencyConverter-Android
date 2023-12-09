@@ -3,10 +3,15 @@ package mo.ed.bankmisr.features.fromto.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.launch
+import mo.ed.bankmisr.di.AppModule
+import javax.inject.Inject
 
 @HiltViewModel
-class FromToViewModel : ViewModel() {
+class FromToViewModel @Inject constructor(
+    @AppModule.IoDispatcher private val ioDispatcher: CoroutineDispatcher,
+) : ViewModel() {
     fun getCurrencies() {
         viewModelScope.launch(ioDispatcher) {
             regularExpressionsInteractor.fetchRegularExpressions().let { response ->
