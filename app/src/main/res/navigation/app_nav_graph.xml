@@ -2,40 +2,18 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/app_nav_graph"
-    app:startDestination="@id/walkthroughFragment">
+    app:startDestination="@id/FromToFragment">
     <fragment
-        android:id="@+id/walkthroughFragment"
-        android:name="mo.ed.ristoranti.views.fragments.WalkthroughFragment"
+        android:id="@+id/FromToFragment"
+        android:name="mo.ed.bankmisr.features.fromto.fragment.FromToFragment"
         android:label="fragment_walkthrough">
-        <action
-            android:id="@+id/action_walkthoughFragment_to_loginFragment"
-            app:destination="@id/loginFragment"
-            app:enterAnim="@anim/from_right"
-            app:exitAnim="@anim/to_left"
-            app:popEnterAnim="@anim/from_left"
-            app:popExitAnim="@anim/to_right"  />
+
     </fragment>
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="mo.ed.ristoranti.views.fragments.LoginFragment"
-        android:label="fragment_login">
-        <action
-            android:id="@+id/action_loginFragment_to_walkthroughFragment"
-            app:destination="@id/walkthroughFragment"
-            app:enterAnim="@anim/from_right"
-            app:exitAnim="@anim/to_left"
-            app:popEnterAnim="@anim/from_left"
-            app:popExitAnim="@anim/to_right"  />
-        <action
-            android:id="@+id/action_loginFragment_to_SearchFoodFragment"
-            app:destination="@id/searchFoodFragment"
-            app:enterAnim="@anim/from_right"
-            app:exitAnim="@anim/to_left"
-            app:popEnterAnim="@anim/from_left"
-            app:popExitAnim="@anim/to_right"  />
-    </fragment>
-    <fragment
-        android:id="@+id/searchFoodFragment"
-        android:name="mo.ed.ristoranti.views.fragments.SearchFoodFragment"
-        android:label="fragment_search_food"></fragment>
+<!--    <action-->
+<!--        android:id="@+id/action_walkthoughFragment_to_loginFragment"-->
+<!--        app:destination="@id/loginFragment"-->
+<!--        app:enterAnim="@anim/from_right"-->
+<!--        app:exitAnim="@anim/to_left"-->
+<!--        app:popEnterAnim="@anim/from_left"-->
+<!--        app:popExitAnim="@anim/to_right"  />-->
 </navigation>

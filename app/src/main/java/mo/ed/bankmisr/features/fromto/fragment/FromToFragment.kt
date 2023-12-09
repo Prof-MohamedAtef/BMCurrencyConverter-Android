@@ -6,10 +6,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
-import mo.ed.bankmisr.baseui.views.fragments.BaseFragment
+import androidx.fragment.app.viewModels
+import dagger.hilt.android.AndroidEntryPoint
+import mo.ed.bankmisr.ui.views.fragments.BaseFragment
 import mo.ed.bankmisr.features.fromto.screens.fromToScreen
+import mo.ed.bankmisr.features.fromto.viewmodels.FromToViewModel
 
+@AndroidEntryPoint
 class FromToFragment : BaseFragment() {
+    private val fromToViewModel: FromToViewModel by viewModels()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        fromToViewModel.getCurrencies()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

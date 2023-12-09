@@ -1,4 +1,4 @@
-package mo.ed.bankmisr.baseui.views.fragments
+package mo.ed.bankmisr.ui.views.fragments
 
 import android.text.SpannableStringBuilder
 import android.text.style.ImageSpan

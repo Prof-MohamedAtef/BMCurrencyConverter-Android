@@ -1,4 +1,4 @@
-package mo.ed.bankmisr.baseui.theme
+package mo.ed.bankmisr.ui.theme
 
 import android.app.Activity
 import android.os.Build

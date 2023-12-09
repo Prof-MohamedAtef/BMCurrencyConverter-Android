@@ -1,7 +1,6 @@
-package mo.ed.bankmisr.baseui.basecomposeui
+package mo.ed.bankmisr.ui.basecomposeui
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement.Absolute.Center
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
