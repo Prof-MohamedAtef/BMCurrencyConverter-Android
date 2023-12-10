@@ -22,19 +22,27 @@ class FromToViewModel @Inject constructor(
     private val accountsInteractor: FromToInteractor,
 ) : ViewModel() {
 
-    var _screenUiState = MutableStateFlow(
-        BaseUIState()
-    )
+    var _screenUiState = MutableStateFlow(BaseUIState())
     val screenUiState = _screenUiState.asStateFlow()
     fun getCurrencies() {
         viewModelScope.launch(ioDispatcher) {
             accountsInteractor.getCurrencies().let { response ->
                 when (response) {
+                    is Result.Loading -> {
+                        _screenUiState.update {
+                            it.copy(isLoading = true)
+                        }
+                    }
                     is Result.Success -> {
                         val symbols = response.data as? List<Symbols>
-                        _screenUiState.update {  }
+                        _screenUiState.update {
+                            it.copy(symbols = symbols)
+                        }
                     }
                     is Result.Failure -> {
+                        _screenUiState.update {
+                            it.copy(hasError = true, errorMessage = "Exception: failure in api call")
+                        }
                         Log.e("failure", " failure in api call")
                     }
 
