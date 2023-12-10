@@ -1,17 +1,19 @@
 package mo.ed.bankmisr.repositories
 
+import android.content.Context
 import mo.ed.bankmisr.api.ApiService
 import mo.ed.bankmisr.utils.NetworkResultWrapper
 import mo.ed.bankmisr.utils.Result
 import mo.ed.bankmisr.utils.Result.Failure
 import mo.ed.bankmisr.utils.Result.Success
-import mo.ed.bankmisr.utils.Result.Loading
+
 import java.lang.Exception
 import javax.inject.Inject
 
 class FromToRepository @Inject constructor(
+    private val context: Context,
     internal val apiService: ApiService,
-) {
+) : BaseRepo(){
     suspend fun getCurrencies(): Result<Any> {
         kotlin.runCatching {
             apiService.getCurrencies().also {
@@ -33,10 +35,11 @@ class FromToRepository @Inject constructor(
                     }
 
                     is NetworkResultWrapper.NotDataFound -> {
-                        Result.Success(null)
+                        return Result.Success(null)
                     }
                 }
             }
+            }.onFailure { return handleError(context, it) }
+            return kotlin.Result.Failure(UnknownException(context))
         }
-    }
 }
