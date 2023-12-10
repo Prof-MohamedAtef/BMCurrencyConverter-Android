@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BankMisr</string>
+    <string name="error_generic_msg">Something went wrong, please try again later.</string>
 </resources>

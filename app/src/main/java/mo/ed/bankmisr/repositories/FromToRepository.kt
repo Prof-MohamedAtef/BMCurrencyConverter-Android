@@ -2,6 +2,7 @@ package mo.ed.bankmisr.repositories
 
 import android.content.Context
 import mo.ed.bankmisr.api.ApiService
+import mo.ed.bankmisr.domain.error.exceptions.UnknownException
 import mo.ed.bankmisr.utils.NetworkResultWrapper
 import mo.ed.bankmisr.utils.Result
 import mo.ed.bankmisr.utils.Result.Failure
@@ -35,11 +36,11 @@ class FromToRepository @Inject constructor(
                     }
 
                     is NetworkResultWrapper.NotDataFound -> {
-                        return Result.Success(null)
+                        return Success(null)
                     }
                 }
             }
             }.onFailure { return handleError(context, it) }
-            return kotlin.Result.Failure(UnknownException(context))
+            return Failure(UnknownException(context))
         }
 }
