@@ -24,6 +24,9 @@ android {
     }
 
     buildTypes {
+        debug{
+            buildConfigField("String", "Fixer_API_KEY", "Fixer_API_KEY")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
