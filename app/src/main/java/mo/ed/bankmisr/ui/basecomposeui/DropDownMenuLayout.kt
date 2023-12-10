@@ -73,7 +73,7 @@ fun DropDownMenuLayout(
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewLoginFunction() {
+fun PreviewDropDownLayout() {
     Surface(modifier = Modifier.fillMaxSize()) {
         DropDownMenuLayout(listOf("Name", "Age"))
     }
